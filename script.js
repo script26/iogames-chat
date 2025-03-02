@@ -4,6 +4,7 @@ window.onload = function () {
     var nme = document.getElementById("nme"); // Username input field
     var log = document.getElementById("log"); // Log container for messages
 	var pick = document.getElementById("colorpicker"); // Username's Colorpicker
+	var message = document.getElementById("message");
 
 	// A map to store usernames and their assigned colors
 	var userColors = {};
@@ -27,7 +28,7 @@ window.onload = function () {
 
 	// Function to set username
 	function setName(element, string) {
-		document.getElementById("nme").value = string;
+		nme.value = string;
 	}
 
     // Function to set a cookie
@@ -98,7 +99,7 @@ window.onload = function () {
     }
 
 	// Handle the form submission for sending messages
-    document.getElementById("message").onsubmit = function () {
+    message.onsubmit = function () {
         if (!conn) {
             return false;
         }
@@ -170,7 +171,6 @@ window.onload = function () {
 		        item.appendChild(messageDiv); // Add message div
 
 		        // Append the constructed item to the chat log
-		        //appendLog(item);
 				appendLog(item);
 
 		    } catch (error) {
@@ -180,12 +180,10 @@ window.onload = function () {
 
 		// Append log function implementation (ensure this exists)
 		function appendLog(item) {
-		    const log = document.getElementById("log"); // Chat log container ID
 		    if (!log) {
 		        console.error("Chat log container not found!");
 		        return;
 		    }
-		    //log.appendChild(item);
 		    log.prepend(item);
 		}
     } else {
