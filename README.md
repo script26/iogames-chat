@@ -1,6 +1,20 @@
 # What this chat actually looks like
 ![png](https://github.com/script26/iogames-chat/blob/main/screenshots/screenshot.png)
 
+# Features of this chat
+- Change username color
+- Gives randomized "Guest____" username without a cookie (new user)
+- Gives randomized username color without a cookie (new user)
+- Remembers the last username color you had
+- Remembers the last username you had
+- Looks eerily similar to iogames chat (same font)
+- Messages always start from the bottom, and every page reload always starts at the bottom of page
+- Very fast
+- Extremely small codebase (more reliable, secure and auditable)
+- Exposed websocket protocol, so you can directly connect to the chat with a custom web client
+- Based on golang backend
+- Is open source so you can customize it to your liking
+
 # Chat Example
 
 This application shows how to use the
