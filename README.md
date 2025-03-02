@@ -10,6 +10,7 @@
 - Looks eerily similar to iogames chat (same font)
 - Messages always start from the bottom, and every page reload always starts at the bottom of page
 - Very fast
+- Broadcasts the last 30 or so messages (remembers old messages, even when page reloads)
 - Extremely small codebase (more reliable, secure and auditable)
 - Exposed websocket protocol, so you can directly connect to the chat with a custom web client
 - Based on golang backend
