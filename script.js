@@ -97,16 +97,6 @@ window.onload = function () {
         }
     }
 
-	/* const logElement = document.getElementById('log');
-
-	if (logElement.scrollTop === 0) {
-	    logElement.scrollTo(0, logElement.scrollHeight);
-	} */
-
-	/* if at #log scroll 0 {
-		then scrollTo(0, #log);
-	} */
-
 	// Handle the form submission for sending messages
     document.getElementById("message").onsubmit = function () {
         if (!conn) {
@@ -115,12 +105,6 @@ window.onload = function () {
         if (!msg.value) {
             return false;
         }
-
-	    /* // Prepend the username to the message
-	    var fullMessage = nme.value + ": " + msg.value;
-
-	    // Send the message through the WebSocket connection
-        conn.send(fullMessage); */
 
 	    // Send username and message as JSON to the server
 	    const fullMessage = {
@@ -210,43 +194,4 @@ window.onload = function () {
         item.innerHTML = "<b>Your browser does not support WebSockets.</b>"; // Bold error message
         appendLog(item); // Append the error message to the log
     }
-
-	/* -------------------------------- */
-	/* Start at bottom position of logs */
-	/* -------------------------------- */
-
-	function scrollChatToBottom() {
-	  const chatMessages = document.getElementById('log');
-	  chatMessages.scrollTop = chatMessages.scrollHeight;
-	}
-
-	// Run on page load
-	window.addEventListener('DOMContentLoaded', scrollChatToBottom);
-
-	/* window.addEventListener('load', () => {
-	  setTimeout(scrollChatToBottom, 100);
-	}); */
-
-	/* ----------------------------- */
-	/* Always stay at bottom of logs */
-	/* ----------------------------- */
-
-	function scrollToBottom() {
-	  window.scrollTo(0, document.log.scrollHeight);
-	}
-
-	// Initial scroll to bottom
-	scrollToBottom();
-
-	// Create a MutationObserver to watch for changes in the body
-	const observer = new MutationObserver(scrollToBottom);
-
-	// Start observing the body for changes
-	observer.observe(document.log, {
-	  childList: true,
-	  subtree: true
-	});
-
-	// Optional: Scroll to bottom when window is resized
-	window.addEventListener('resize', scrollToBottom);
 };
