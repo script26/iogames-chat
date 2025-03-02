@@ -1,3 +1,6 @@
+# What this chat actually looks like
+![png](https://github.com/script26/iogames-chat/blob/main/screenshots/screenshot.png)
+
 # Chat Example
 
 This application shows how to use the
