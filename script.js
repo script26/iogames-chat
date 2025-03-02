@@ -1,10 +1,10 @@
 window.onload = function () {
-	var conn;
-	var msg = document.getElementById("msg"); // Message input field
-	var nme = document.getElementById("nme"); // Username input field
-	var log = document.getElementById("log"); // Log container for messages
-	var pick = document.getElementById("colorpicker"); // Username's Colorpicker
-	var message = document.getElementById("message");
+    var conn;
+    var msg = document.getElementById("msg"); // Message input field
+    var nme = document.getElementById("nme"); // Username input field
+    var log = document.getElementById("log"); // Log container for messages
+    var pick = document.getElementById("colorpicker"); // Username's Colorpicker
+    var message = document.getElementById("message");
 
 	// A map to store usernames and their assigned colors
 	var userColors = {};
