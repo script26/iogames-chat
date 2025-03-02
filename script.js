@@ -6,9 +6,9 @@ window.onload = function () {
     var pick = document.getElementById("colorpicker"); // Username's Colorpicker
     var message = document.getElementById("message");
 
-	// A map to store usernames and their assigned colors
-	var userColors = {};
-	var userNames = {};
+    // A map to store usernames and their assigned colors
+    var userColors = {};
+    var userNames = {};
 
     // Function to generate a random color
     function getRandomColor() {
